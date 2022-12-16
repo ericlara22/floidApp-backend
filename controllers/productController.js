@@ -1,12 +1,11 @@
 const {productService} = require('../services');
 
 module.exports = {
-    getAllProducts: async (req,res) => {
+    getAllProducts: async (req, res) => {
         try {
-            console.log(req.body)
             const {id, password} = req.body;
             if(id && password){
-                const result = await productService(id, password);
+                const result = await productService.getAllProductsByUser(id, password);
                 console.log(result)
                 res.status(result.code).json({message: result.msg, data: result.products});
             } else {

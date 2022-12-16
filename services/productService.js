@@ -1,5 +1,5 @@
 const axios = require('axios');
-const {} = require('../config');
+const {apiToken, apiUrl} = require('../config');
 
 module.exports = {
     getAllProductsByUser: async (id, password) => {
@@ -7,11 +7,13 @@ module.exports = {
 
         let config = {
             headers: {
-                Authorization: apiToken
+                Authorization: "Bearer ",apiToken,
+                ['content-type']: "application/json"
             }
         }
 
         axios.post(apiUrl, data, config).then( res => {
+            console.log(res.data)
             return res.data
         })
     }
