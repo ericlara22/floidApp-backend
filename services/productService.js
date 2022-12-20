@@ -7,13 +7,12 @@ module.exports = {
 
         let config = {
             headers: {
-                Authorization: "Bearer ",apiToken,
-                ['content-type']: "application/json"
+                'Authorization': `Bearer ${apiToken}`,
+                'content-type': 'application/json',
             }
         }
 
-        axios.post(apiUrl, data, config).then( res => {
-            console.log(res.data)
+        return axios.post(apiUrl, data, config).then( res => {
             return res.data
         })
     }
