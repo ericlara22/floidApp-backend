@@ -1,7 +1,7 @@
-const loginController = require('./login');
-const mainController = require('./main');
+const loginController = require('./loginController');
+const productController = require('./productController');
 
 module.exports = {
     loginController,
-    mainController
+    productController
 }
