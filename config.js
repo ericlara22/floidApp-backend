@@ -5,7 +5,7 @@ const token = 'b69d37df386694f97465360f40480a11afd048b6435850ec236b25083196dc3c9
 
 
 module.exports = {
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 3001,
     apiUrl: process.env.URL || url,
     accessToken: process.env.TOKEN || token
 }
